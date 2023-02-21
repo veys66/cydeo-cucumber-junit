@@ -1,4 +1,4 @@
-@Regression @smoke
+@Regression @smoke @login
 Feature: Library app login feature
   User Story:
   As a user, I should be able to login with correct credentials to different accounts. And dashboard
@@ -6,7 +6,10 @@ Feature: Library app login feature
 
   Accounts are: librarian, student, admin
 
-  @librarian @employee
+  Background: For the scenario in the feature file, user is expected to be on login page
+    Given user is on the library page
+
+  @librarian @employee @wip
   Scenario: Login as librarian
     When user enters librarian username
     And user enters librarian password
