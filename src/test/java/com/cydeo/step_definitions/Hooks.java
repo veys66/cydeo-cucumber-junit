@@ -35,7 +35,6 @@ public class Hooks {
     @After
     public void teardownScenario(Scenario scenario){
 
-        Driver.closeDriver();
 
         //scenario.isFailed() --> if scenario fails this method will return TRUE boolean value
 
