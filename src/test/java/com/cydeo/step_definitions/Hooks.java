@@ -3,6 +3,7 @@ package com.cydeo.step_definitions;
 import com.cydeo.utilities.Driver;
 import io.cucumber.java.AfterStep;
 import io.cucumber.java.BeforeStep;
+import io.cucumber.java.Scenario;
 import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.OutputType;
@@ -25,14 +26,16 @@ public class Hooks {
         System.out.println("====this will only apply to scenarios with @login tag");
     }
 
-    //@Before //( value = "@db", order = 0)
+    @Before //( value = "@db", order = 0)
     public void setupForDatabaseScenarios(){
         System.out.println("====this will only apply to scenarios with @db tag");
     }
 
-/*
+
     @After
     public void teardownScenario(Scenario scenario){
+
+        Driver.closeDriver();
 
         //scenario.isFailed() --> if scenario fails this method will return TRUE boolean value
 
@@ -62,5 +65,4 @@ public class Hooks {
         System.out.println("--------> applying tearDown using @AfterStep");
     }
 
- */
 }
