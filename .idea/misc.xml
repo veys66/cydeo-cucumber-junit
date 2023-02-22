@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="EntryPointsManager">
+    <pattern value="com.cydeo.step_definitions.Hooks" method="afterStep" />
+    <pattern value="com.cydeo.step_definitions.Hooks" />
+    <pattern value="com.cydeo.step_definitions.Hooks" method="setupStep" />
+  </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="MavenProjectsManager">
     <option name="originalFiles">
