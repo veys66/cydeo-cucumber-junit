@@ -65,15 +65,15 @@ public class GoogleStepDefinitions {
 
         Assert.assertEquals(expectedTitle, actualTitle);
 
-
-
     }
 
 
     @Then("User should see {string} in the result")
     public void userShouldSeeInTheResult(String expectedCapital) {
-        //String actualValue = googleSearchPage.getCapital();
-        //Assert.assertEquals(expectedCapital,actualValue);
+        String actualValue = googleSearchPage.getCapital();
+        Assert.assertEquals(expectedCapital,actualValue);
     }
+
+
 
 }
