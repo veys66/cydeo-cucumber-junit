@@ -100,5 +100,20 @@ This method accepts a String "expectedTitle" and Asserts if it is true
 
     }
 
+    /**
+     * This method will accept a group radio buttons as a List of WebElement
+     * It will loop through the List, and click to the radio button with provided attributeValue
+     * @param radioButtons
+     * @param attributeValue
+     */
+    public static void clickRadioButton(List<WebElement> radioButtons, String attributeValue){
+
+        for(WebElement each: radioButtons){
+            if(each.getAttribute("value"). equalsIgnoreCase(attributeValue)){
+                each.click();
+            }
+        }
+    }
+
 
 }
