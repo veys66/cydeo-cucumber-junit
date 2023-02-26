@@ -66,6 +66,14 @@ This method accepts a String "expectedTitle" and Asserts if it is true
         wait.until(ExpectedConditions.invisibilityOf(webElement));
     }
 
+    /**
+     * This method will accept a String as expected value and verify actual URL CONTAINS the value.
+     * @param expectedInUrl
+     */
+    public static void verifyURLContains(String expectedInUrl){
+        Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains(expectedInUrl));
+    }
+
 
 
 }
