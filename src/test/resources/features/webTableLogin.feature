@@ -16,7 +16,7 @@ Feature: User should be able to login using correct credential
     And user clicks to login button
     Then user should see url contains orders
 
-    @wip
+
   Scenario: User should be able to see all 12 months ın months dropdown
     When user enters below credentials
       | username | Test   |

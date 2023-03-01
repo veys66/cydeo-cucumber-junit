@@ -9,11 +9,11 @@ import java.util.List;
 
 public class OrderPage extends BasePage{
 
-    public OrderPage() {
+    public OrderPage(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(name = "product")
+    @FindBy (name= "product")
     public WebElement productDropdown;
 
     @FindBy(name = "quantity")
@@ -40,11 +40,14 @@ public class OrderPage extends BasePage{
     @FindBy(name = "cardNo")
     public WebElement cardNoInput;
 
-    @FindBy (name = "cardExp")
+    @FindBy(name = "cardExp")
     public WebElement cardExpInput;
 
     @FindBy(css = "button[type='submit']")
     public WebElement processOrderBtn;
+
+
+
 
 
 }
