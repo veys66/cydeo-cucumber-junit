@@ -13,7 +13,7 @@ public class OrderPage extends BasePage{
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy (name= "product")
+    @FindBy (name="product")
     public WebElement productDropdown;
 
     @FindBy(name = "quantity")
