@@ -12,15 +12,14 @@ public class WebTableLoginPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(name="username")
+    @FindBy(name = "username")
     public WebElement inputUsername;
 
-    @FindBy(name="password")
+    @FindBy(name = "password")
     public WebElement inputPassword;
 
     @FindBy(xpath = "//button[.='Login']")
     public WebElement loginButton;
-
 
     /**
      * No parameters.
@@ -47,7 +46,7 @@ public class WebTableLoginPage {
     }
 
     /**
-     * This method will login using credentials from
+     * This method will log in using credentials from
      * configuration.properties
      */
     public void loginWithConfig(){
@@ -55,6 +54,4 @@ public class WebTableLoginPage {
         inputPassword.sendKeys(ConfigurationReader.getProperty("web.table.pw"));
         loginButton.click();
     }
-
-
 }
