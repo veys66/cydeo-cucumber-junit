@@ -33,3 +33,4 @@ Feature: Web table user order feature
     Examples: Famous female scientists
       | productType | quantity | customerName | street    | city   | state   | zipcode | cardType | cardNumber       | expDate | expectedName |
       | MoneyCog    | 2        | Marie Curie  | London st | London | England | 50505   | Visa     | 1111222233334444 | 12/24   | Marie Curie  |
+
