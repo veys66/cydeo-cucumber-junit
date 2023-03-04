@@ -2,11 +2,7 @@ package com.cydeo.step_definitions;
 
 import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.Driver;
-import io.cucumber.java.AfterStep;
-import io.cucumber.java.BeforeStep;
-import io.cucumber.java.Scenario;
-import org.junit.After;
-import org.junit.Before;
+import io.cucumber.java.*;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
@@ -16,11 +12,11 @@ In the class we will be able to pass pre- & post- conditions to each scenario an
 public class Hooks {
 
     //import from io.cucumber.java not from junit
-   /* @Before public void setupScenario(){
-    System.out.println("====Setting up browser using cucumber @Before");
-    }
+   //@Before public void setupScenario(){
+    //System.out.println("====Setting up browser using cucumber @Before");
+   // }
 
-    //@Before //(value = "@login", order = 2)
+    @Before (value = "@login", order = 2)
     public void setupScenarioForLogins(){
         System.out.println("====this will only apply to scenarios with @login tag");
     }
@@ -30,7 +26,7 @@ public class Hooks {
         System.out.println("====this will only apply to scenarios with @db tag");
     }
 
-*/
+
     @After
     public void teardownScenario(Scenario scenario) {
 
